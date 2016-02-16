@@ -11,10 +11,37 @@ function handleNumArrays(na1, na2, callback)
         sumArray.push(sum);
     }
 
-    return sumArray;
+    return callback(sumArray);
 }
 
-handleNumArrays(a, b, function(res){
-    console.log(res.join());
-});
+function printSumArray(sumArray)
+{
+    console.log( sumArray.join() );
+}
+
+function calculateSumArray(sumArray)
+{
+    var sum = 0;
+
+    for(var i = 0; i < sumArray.length; i++)
+    {
+        sum += sumArray[i];
+    }
+
+    console.log("TOTAL: " + sum);
+}
+
+function multipleSumArray(sumArray)
+{
+    for(var i = 0; i < sumArray.length; i++)
+    {
+        sumArray[i] *= 10;
+    }
+
+    console.log( "Multipled values: " + sumArray.join() );
+}
+
+handleNumArrays(a, b, printSumArray);
+handleNumArrays(a, b, calculateSumArray);
+handleNumArrays(a, b, multipleSumArray);
 
