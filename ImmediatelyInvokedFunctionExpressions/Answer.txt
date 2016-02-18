@@ -1,0 +1,35 @@
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    What is Immediatily invoked function expressions ?
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+En Immediatily invoked function expressions er en funktion som bliver
+exexutet som det første i en runtime.
+
+----
+
+ Dette er nu ekspression og ikke bare en funktion. Det kan vi se ved at der er parenteser rundt om hele funktionen.
+ Den er også selvkørende og det kan vi i linje 15 fordi der (). Dvs. vi behøver ikke kalde den, den kører af sig selv.
+ IIFE er annoumous funktioner (ingen fkt navn).
+
+
+ Expressions: Et stykke kode, som du sætter lig med en variable.
+ Vi har også funktion expression i JS dette er muligt fordi, vi har first-class functions.
+
+ Function Expression:  var test = function() {};
+
+ Function Declaration:  function test() {};
+
+ (function(lastname){
+
+     var firstname = 'John';
+     console.log(firstname + " , " + lastname);
+
+ }('Doe'));
+
+
+
+  Den parantes der er rundt om fkt gør det vores funktion til en expression, så der med har vi en unamed function
+  expression.
+  Alle varaibler inden i vores IIFE er local dvs. alt udenom kan ikke få fat i varaiblerne.
+  http://javascriptissexy.com/12-simple-yet-powerful-javascript-tips/
+

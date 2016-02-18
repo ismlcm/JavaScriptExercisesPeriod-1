@@ -1,5 +1,5 @@
 /*
-    Hvis en variabel ikke er deklareret i en funktion, vil den (implicitly) automatisk blive deklareret i toppen af functionen.
+    Hvis en variabel bliver instanseret men ikke er deklareret i en funktion, vil den (implicitly) automatisk blive deklareret i toppen af functionen.
     Dvs. variabel deklarationen er hoisted i toppen af funktionen.
     For at undgå kode forvirring anbefales det at man explicitly deklarere variablerne i toppen af funktionen / i scopen, for de deklareres alligevel.
  */
