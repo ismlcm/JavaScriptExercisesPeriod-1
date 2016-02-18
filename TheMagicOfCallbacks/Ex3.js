@@ -1,39 +1,40 @@
-var names = ['Lars', 'Jan', 'Peter', 'Bo', 'Iso', 'Maz', 'Ib'];
+var names = [ 'Lars', 'Jan', 'Peter', 'Bo', 'Iso', 'Maz', 'Ib' ];
 
-function upperCasename(name)
+function upperCasename( name )
 {
-    return name.toUpperCase();
+	return name.toUpperCase();
 }
 
-function checkName(name)
+function checkName( name )
 {
-    if( name.length <= 3 )
-    {
-        return name;
-    }
+	if( name.length <= 3 )
+	{
+		return name;
+	}
 }
 
-Array.prototype.myFilter = function myFilter(callback){
+Array.prototype.myFilter = function myFilter( callback )
+{
 
-    var filteredArray = [];
+	var filteredArray = [];
 
-    for(var i = 0; i < this.length; i++)
-    {
-        if(callback(this[i]))
-        {
-            filteredArray.push( callback(this[i]) );
-        }
-    }
+	for( var i = 0; i < this.length; i++ )
+	{
+		if( callback( this[ i ] ) )
+		{
+			filteredArray.push( callback( this[ i ] ) );
+		}
+	}
 
-    return filteredArray;
+	return filteredArray;
 
 };
 
-var newArray = names.myFilter(upperCasename);
-var newArray2 = names.myFilter(checkName);
+var newArray = names.myFilter( upperCasename );
+var newArray2 = names.myFilter( checkName );
 
-console.log(newArray);
-console.log(newArray2);
+console.log( newArray );
+console.log( newArray2 );
 
 
 

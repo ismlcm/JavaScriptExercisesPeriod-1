@@ -16,6 +16,6 @@ function loopPersonPropeties(person)
     console.log(":::::::::::::::::::::::::::::");
 }
 
-var ismail = new Person("Ismail", "Cam", 30);
+var ismail = new Person( "Ismail", "Cam", 30 );
 
 loopPersonPropeties(ismail);

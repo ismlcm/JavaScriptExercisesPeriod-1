@@ -1,25 +1,24 @@
-
 var obj = {
-    name: "Ismail",
-    birthday: "12-09-1985",
-    hobby: "Programming",
-    email: "ismlipad@gmail.com"
+	name: "Ismail",
+	birthday: "12-09-1985",
+	hobby: "Programming",
+	email: "ismlipad@gmail.com"
 };
 
-function loopObjPropeties(obj)
+function loopObjPropeties( obj )
 {
-    for( var key in obj )
-    {
-        console.log( key + ": " + obj[key] );
-    }
+	for( var key in obj )
+	{
+		console.log( key + ": " + obj[ key ] );
+	}
 
-    console.log(":::::::::::::::::::::::::::::");
+	console.log( ":::::::::::::::::::::::::::::" );
 }
 
-loopObjPropeties(obj);
+loopObjPropeties( obj );
 
 delete obj.birthday;
 
-loopObjPropeties(obj);
+loopObjPropeties( obj );
 
-console.log( obj.hasOwnProperty("birthday") ); // false because property is deleted.
+console.log( obj.hasOwnProperty( "birthday" ) ); // false because property is deleted.
