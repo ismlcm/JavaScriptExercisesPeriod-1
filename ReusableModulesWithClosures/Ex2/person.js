@@ -1,26 +1,23 @@
-
 module.exports =
 {
-        person: function(name, age)
+    Person: function( name, age )
+    {
+        this.name = name;
+        this.age = age;
+
+        this.setAge = function( age )
+        {
+            this.age = age;
+        };
+
+        this.setName = function( name )
         {
             this.name = name;
-            this.age = age;
+        };
 
-            return this;
-        },
-
-        setAge: function(person, age)
+        this.getInfo = function()
         {
-            person.age = age;
-        },
-
-        setName: function(person, name)
-        {
-            person.name = name;
-        },
-
-        getInfo: function(person)
-        {
-            return person.name + ", " + person.age;
-        }
+            return this.name + ", " + this.age;
+        };
+    }
 };

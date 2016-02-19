@@ -1,11 +1,24 @@
 
-var p = require('./person');
+var p = require("./person");
 
-var person = p;
+// New persons
+var ismail = new p.Person("Ismail", 30);
+var mazlum = new p.Person("Mazlum", 25);
 
-var ismail = person.person("Ismail", 30);
+// Print persons
+console.log("\n:::: Original ::::");
+console.log( ismail.getInfo() );
+console.log( mazlum.getInfo() );
 
-person.setAge(ismail, 20);
-person.setName(ismail, "Mazlum");
+// Change persons
+ismail.setName("Ismail changed");
+ismail.setAge(3);
+mazlum.setName("Mazlum changed");
+mazlum.setAge(2);
 
-console.log( person.getInfo(ismail) );
+// Print persons again
+console.log("\n:::: Changed ::::");
+console.log( ismail.getInfo() );
+console.log( mazlum.getInfo() );
+
+
